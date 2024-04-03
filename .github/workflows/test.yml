@@ -1,0 +1,22 @@
+# This workflow will run tests using node and then publish a package to GitHub Packages when a release is created
+# For more information see: https://docs.github.com/en/actions/publishing-packages/publishing-nodejs-packages
+
+name: Test
+
+on: push
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        id: checkout
+        uses: actions/checkout@v4
+      - name: Run my Action
+        id: run-action
+        uses: jwx0925/test-js-actions@v1
+        with:
+          milliseconds: 1000
+      - name: Print Output
+        id: output
+        run: echo "${{ steps.run-action.outputs.time }}"
