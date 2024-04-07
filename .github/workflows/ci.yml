@@ -13,7 +13,7 @@ permissions:
 
 jobs:
   test-javascript:
-    name: JavaScript Tests
+    name: JavaScript Tests1
     runs-on: ubuntu-latest
 
     steps:
