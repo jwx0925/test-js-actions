@@ -20,3 +20,6 @@ jobs:
       - name: Print Output
         id: output
         run: echo "${{ steps.run-action.outputs.time }}"
+      - name: Print Output1
+        id: output1
+        run: echo "${{ steps.run-action.outputs.time }}"
